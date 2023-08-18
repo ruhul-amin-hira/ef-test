@@ -1,42 +1,128 @@
+//google font
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
+
 *,
 *::after,
-*::before{
-  margin:0;
-  padding:0;
+*::before {
+  margin: 0;
+  padding: 0;
 }
 
+$primary-color: #ff5400;
+$dark-orange: #fe471c;
 
-$primary-color:#FF5400;
-
-
-
-html{
-
+html {
   font-size: 10px;
+  font-family: "Roboto", sans-serif;
 }
 
-body{
+body {
   box-sizing: border-box;
 }
 
-.top{
-  padding:1rem 2rem;
+p {
+  font-size: 1.6rem;
+}
 
-  &-nav{
-    &__col1{
-    }
-    &__logo{
+.top {
+  padding: 1rem 2rem;
 
-      &-link{
-        display:block;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(21, 21, 21, 0.5) 1%,
+      rgba(70, 70, 70, 0.1) 100%
+    ),
+    url("/images/bg-compress.png");
+  background-size: cover;
+  background-position: top;
+  min-height: 700px;
+
+  &-nav {
+    display: flex;
+    justify-content: space-between;
+
+    // &__col1{
+    // }
+    &__logo {
+      &-link {
+        display: block;
         max-width: 12rem;
       }
-      &-img{
+
+      &-img {
         max-width: 100%;
         display: block;
       }
     }
+
+    // for colum 2 on navbar
+
+    &__col2 {
+      // display:flex;
+      // flex-direction: column;
+    }
+
+    &__top {
+      &-links {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+      }
+
+      &-link {
+        font-size: 1.3rem;
+        text-decoration: none;
+        color: white;
+      }
+    }
+
+    &__category {
+      display: flex;
+      align-items: center;
+      padding: 1.3rem 6rem 1.3rem 3rem;
+      gap: 2rem;
+      margin-top: 0.8rem;
+      color: white;
+      border-radius: 2rem;
+      // background: linear-gradient(90deg, #0A1419 0%, #34454D 100%);
+      background: linear-gradient(
+        85deg,
+        rgba(9, 20, 26, 0.8) 15.5%,
+        rgba(52, 69, 77, 0.8) 100%
+      );
+      backdrop-filter: blur(100px);
+      position: relative;
+
+      &-con {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.7rem;
+        cursor: pointer;
+
+        & i:nth-child(1) {
+          font-size: 1.8rem;
+        }
+
+        & i:nth-child(2) {
+          font-size: 1rem;
+        }
+      }
+
+      &-name {
+        font-size: 1.5rem;
+      }
+    }
+    &__search {
+      padding: 1.6rem;
+      border-radius: 50%;
+      background: linear-gradient(180deg, $dark-orange 0%, #fe7405 100%);
+      position: absolute;
+      right: -1px;
+      cursor: pointer;
+      & i {
+        font-size: 1.3rem;
+      }
+    }
   }
 }
-
-
