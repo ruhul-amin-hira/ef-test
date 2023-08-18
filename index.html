@@ -1,15 +1,62 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app">
-      <h1>Hello world</h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <title>Electronic First</title>
+</head>
+
+<body>
+  <section>
+    <div class="top">
+      <div class="top-nav">
+        <div class="top-nav__col1">
+          <a href="#" class="top-nav__logo-link">
+            <img src="/images/main-logo.png" alt="logo" class="top-nav__logo-img">
+          </a>
+        </div>
+        <!-- Navbar middle part -->
+        <div class="top-nav__col2">
+          <div class="top-nav__top-links">
+            <a href="#" class="top-nav__top-link">Trending</a>
+            <a href="#" class="top-nav__top-link">Pre-orders</a>
+            <a href="#" class="top-nav__top-link">Upcoming</a>
+            <a href="#" class="top-nav__top-link">Support 24/7</a>
+          </div>
+          <div class="top-nav__category">
+            <div class="top-nav__category-con">
+              <i class="fa-solid fa-display"></i>
+              <p class="top-nav__category-name">PC</p>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+
+            <div class="top-nav__category-con">
+                <i class="fa-brands fa-playstation"></i>
+              <p class="top-nav__category-name">Playstation</p>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="top-nav__category-con">
+                <i class="fa-brands fa-xbox"></i>
+              <p class="top-nav__category-name">Xbox</p>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="top-nav__category-con">
+                <i class="fa-solid fa-gamepad"></i>
+              <p class="top-nav__category-name">Nintendo</p>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
+        </div>
+        <div class="top-nav__col3">
+          <p>cart</p>
+        </div>
+      </div>
     </div>
-    <script type="module" src="./src/js/main.js"></script>
-  </body>
+  </section>
+  <script type="module" src="./src/js/main.js"></script>
+</body>
+
 </html>

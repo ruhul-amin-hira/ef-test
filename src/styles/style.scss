@@ -5,3 +5,38 @@
   padding:0;
 }
 
+
+$primary-color:#FF5400;
+
+
+
+html{
+
+  font-size: 10px;
+}
+
+body{
+  box-sizing: border-box;
+}
+
+.top{
+  padding:1rem 2rem;
+
+  &-nav{
+    &__col1{
+    }
+    &__logo{
+
+      &-link{
+        display:block;
+        max-width: 12rem;
+      }
+      &-img{
+        max-width: 100%;
+        display: block;
+      }
+    }
+  }
+}
+
+
