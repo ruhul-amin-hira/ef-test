@@ -151,11 +151,12 @@ p {
 // Dropdown menu
 
 .dropdown {
-  display: none;
+  visibility: hidden;
+  height: 0;
+  width: 0;
   position: absolute;
   left: 0;
   top: 125%;
-  width: 100%;
   // background: linear-gradient(151deg, #12222A 0%, #606C6E 69.36%, #91724A 100%);
   background: linear-gradient(
     131deg,
@@ -167,6 +168,8 @@ p {
   border-radius: 1rem;
   box-sizing: border-box;
   backdrop-filter: blur(150px);
+  
+
 
   &__category {
     background: linear-gradient(
@@ -426,6 +429,16 @@ p {
   }
 
 
+}
+
+
+// utility //
+
+.show-dropdown{
+  width: 100% !important;
+  height: auto !important;
+  visibility: visible !important;
+  transition: visibility 0.5s ease-in;
 }
 
 
