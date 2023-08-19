@@ -1,5 +1,5 @@
 //google font
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 
 *,
 *::after,
@@ -73,6 +73,7 @@ p {
         font-size: 1.3rem;
         text-decoration: none;
         color: white;
+        font-weight: 400;
       }
     }
 
@@ -80,7 +81,7 @@ p {
       display: flex;
       align-items: center;
       padding: 1.3rem 6rem 1.3rem 3rem;
-      gap: 2rem;
+      gap: 3rem;
       margin-top: 0.8rem;
       color: white;
       border-radius: 2rem;
@@ -111,6 +112,7 @@ p {
 
       &-name {
         font-size: 1.5rem;
+        font-weight: 400;
       }
     }
     &__search {
@@ -124,5 +126,90 @@ p {
         font-size: 1.3rem;
       }
     }
+    &__right {
+      display: flex;
+      align-items: center;
+      gap: 1.8rem;
+      & i {
+        font-size: 2rem;
+        cursor: pointer;
+
+        &:nth-child(1) {
+          color: white;
+        }
+        &:nth-child(2) {
+          color: #3074e1;
+          padding: 1.3rem 1.5rem;
+          background-color: #101010;
+          border-radius: 1rem;
+        }
+      }
+    }
+  }
+}
+
+// Dropdown menu
+
+.dropdown {
+  position: absolute;
+  left: 0;
+  top:125%;
+  width: 100%;
+  background-color: red;
+  padding: 1.7rem;
+  border-radius: 1rem;
+  box-sizing: border-box;
+
+  &__category {
+    background-color: green;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1.8rem;
+    border-radius: 0.6rem;
+  }
+
+  &__platform {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+
+  &__view {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+  }
+
+  &__con {
+    padding: 2.2rem 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 5px;
+  }
+
+  &__item {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: yellow;
+    padding: 0.5rem;
+    border-radius: 2.3rem;
+  }
+  &__img {
+    max-width: 3.2rem;
+    max-height: 3.2rem;
+    & img {
+      max-width: 100%;
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+
+  &__name {
+    font-size: 1.4rem;
   }
 }
