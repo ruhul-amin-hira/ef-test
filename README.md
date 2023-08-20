@@ -9,7 +9,7 @@
 -Search functionality
 ![Screenshot](./public/images/s3.png)
 
-## Live linK: [https://avatown-demo.vercel.app](https://avatown-demo.vercel.app)
+## Live linK: [https://ruhul-amin-hira.github.io/ef-test/](https://ruhul-amin-hira.github.io/ef-test/)
 
 This project was bootstrapped with [Vite](https://vitejs.dev/).
 
