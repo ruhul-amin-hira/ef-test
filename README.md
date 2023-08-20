@@ -1,13 +1,13 @@
 # Electronic First
 
 -Overall design
-![Screenshot](./public/s1.png)
+![Screenshot](./public/images/s1.png)
 
 -Dropdown functionality
-![Screenshot](./public/s2.png)
+![Screenshot](./public/images/s2.png)
 
 -Search functionality
-![Screenshot](./public/s3.png)
+![Screenshot](./public/images/s3.png)
 
 ## Live linK: [https://avatown-demo.vercel.app](https://avatown-demo.vercel.app)
 
