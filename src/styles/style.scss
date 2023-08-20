@@ -26,7 +26,6 @@ p {
 
 .top {
   padding: 1rem 2rem;
-
   background-image: linear-gradient(
       to bottom,
       rgba(21, 21, 21, 0.5) 1%,
@@ -93,6 +92,7 @@ p {
       );
       backdrop-filter: blur(100px);
       position: relative;
+      z-index: 11;
 
       &-con {
         display: flex;
@@ -120,12 +120,34 @@ p {
       border-radius: 50%;
       background: linear-gradient(180deg, $dark-orange 0%, #fe7405 100%);
       position: absolute;
-      right: -1px;
+      right: -2px;
       cursor: pointer;
+      width: 1.6rem;
+      transition: width 0.2s ease;
       & i {
         font-size: 1.3rem;
       }
     }
+&__advance{
+  display: none;
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+  padding: 1rem 1.6rem;
+}
+    &__input {
+      display: none;
+    }
+
+    &__close {
+      position: absolute;
+      font-size: 1.6rem;
+      right: -3rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      display: none;
+    }
+
     &__right {
       display: flex;
       align-items: center;
@@ -168,8 +190,7 @@ p {
   border-radius: 1rem;
   box-sizing: border-box;
   backdrop-filter: blur(150px);
-  
-
+  z-index: 11;
 
   &__category {
     background: linear-gradient(
@@ -346,44 +367,42 @@ p {
     padding-bottom: 2rem;
   }
 
-  &__header{
+  &__header {
     font-size: 2.6rem;
     font-weight: 500;
-    color:white;
+    color: white;
   }
 
-  &__view-all{
+  &__view-all {
     font-size: 1.5rem;
     font-weight: 400;
     padding: 0.7rem 1.2rem;
-    background-color: #323232 ;
+    background-color: #323232;
     border-radius: 5px;
     border: 1px solid rgb(86, 86, 86);
     text-decoration: none;
     color: white;
   }
 
-  &__row-2{
+  &__row-2 {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap:2.5rem;
+    gap: 2.5rem;
   }
 }
 
-
-.card{
-
+.card {
   text-decoration: none;
 
-  &__box{
+  &__box {
     border-radius: 1rem;
     position: relative;
   }
 
-  &__con{ 
+  &__con {
     height: 20rem;
     overflow: hidden;
-    & img{
+    & img {
       max-height: 100%;
       max-width: 100%;
       width: 100%;
@@ -391,58 +410,113 @@ p {
     }
   }
 
-  &__discount{
+  &__discount {
     position: absolute;
     bottom: -1%;
     left: -3px;
   }
 
-  &__row{
-    color:white;
-    padding-top:1rem;
-    display:flex;
+  &__row {
+    color: white;
+    padding-top: 1rem;
+    display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  &__details{
+  &__details {
     display: flex;
     align-items: center;
   }
 
-  &__type{
+  &__type {
     font-size: 1.2rem;
-    padding:3px 5px;
+    padding: 3px 5px;
     border: 1px solid rgb(86, 86, 86);
     border-radius: 3px;
     color: rgb(120, 120, 120);
-    margin-right:0.8rem;
+    margin-right: 0.8rem;
   }
 
-  &__title{
+  &__title {
     font-size: 1.5rem;
   }
-  
-  &__price{
+
+  &__price {
     font-size: 1.8rem;
     font-weight: 400;
   }
-
-
 }
 
+//***********Dark bg effect********/
+.veil {
+  position: relative;
+  z-index: 1;
+  &::after {
+    content: "";
+    display: block;
+    background-color: rgba(0, 0, 0, 0.465);
+    position: absolute;
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+    inset: 0;
+  }
+
+  & .active,
+  & .top-nav__logo-link,
+  & .top-nav__right {
+    position: relative;
+    z-index: 10;
+    opacity: 1 !important;
+  }
+
+  & .top-nav__category-con {
+    opacity: 0.5;
+  }
+}
 
 // utility //
 
-.show-dropdown{
+.show-dropdown {
   width: 100% !important;
   height: auto !important;
   visibility: visible !important;
   transition: visibility 0.5s ease-in;
 }
 
+.display-block {
+  display: block !important;
+ 
+}
 
+.input-style{
+  box-sizing: border-box;
+ flex: 1;
+  height: 100%;
+  display: block;
+  border-radius: 2rem;
+  outline: none;
+  border: none;
+  padding: 1rem 1.6rem;
+  font-size: 1.5rem;
+ background: transparent;
+  color: white;
+  &::placeholder{
+    color: rgb(249, 189, 165);
+  }
+}
 
+.search-grow {
+  width: 100%;
+  border-radius: 2rem;
+  inset: 0;
+  padding:0;
+  display: flex;
+  background: linear-gradient(-90deg, $dark-orange 0%, #fe7405 100%);
+  align-items: center;
 
-
-
+  & i {
+    display: none;
+  }
+}
